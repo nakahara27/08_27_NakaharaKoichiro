@@ -1,0 +1,137 @@
+body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+	margin-left:10px;
+}
+
+/*パディングをサイズ内側にする処理*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a{
+	margin:2px;
+	padding: 0 4px;
+	display: inline-block;
+	text-align: center;
+	letter-spacing: 0.1em;
+	color:black;
+	opacity:1.0;
+	background-color: rgb(235, 232, 232);
+	border-right: 2px solid silver;
+	border-bottom: 2px solid silver;
+	border-radius: 5px;
+}
+a:hover {
+	background-color:rgb(206, 204, 204);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+
+select{
+	margin:2px;
+	padding:2px 4px;
+	display: inline-block;
+	text-align: center;
+	letter-spacing: 0.1em;
+	color:black;
+	opacity:1.0;
+	background-color: rgb(235, 232, 232);
+	border-right: 2px solid silver;
+	border-bottom: 2px solid silver;
+	border-radius: 5px;
+}
+select:hover {
+	background-color:rgb(206, 204, 204);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+button{
+	margin:2px;
+	padding:2px 4px;
+	display: inline-block;
+	text-align: center;
+	letter-spacing: 0.1em;
+	color:black;
+	opacity:1.0;
+	background-color: rgb(235, 232, 232);
+	border-right: 2px solid silver;
+	border-bottom: 2px solid silver;
+	border-radius: 5px;
+}
+button:hover {
+	background-color:rgb(206, 204, 204);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+table{
+	margin:8px;
+	border-collapse:collapse;/*セル同士の間に隙間を空けない*/
+}
+
+th{
+	padding:0 5px;
+	border:1px solid silver;
+	text-align:center;
+}
+
+td{
+	padding:0 5px;
+	border:1px solid silver;
+}
+
+.btn_red{padding: 1px 4px;
+	display: inline-block;
+	text-align: center;
+	letter-spacing: 0.1em;
+	color: #fff;
+	opacity:0.8;
+	background-color: #ed576c;
+	border-bottom: 4px solid #c5394d;
+	border-radius: 5px;
+}
+.btn_red:hover {
+	 opacity:1.0;
+	 cursor: pointer;
+	 text-decoration: none;
+}
+
+input{
+	border:1px solid gray;
+}
+
+.txt_todo{
+	width:40em;
+}
+
+fieldset{
+	margin:0 auto;
+	width:70em;
+}
+
+legend{
+	background-color:#DAED90;
+}
+
+.spn_sun{
+	color:red;
+}
+
+.spn_sat{
+	color:#0066FF;
+}
+
+.spn_holiday{
+	color:White;
+	background-color:Red;
+}
