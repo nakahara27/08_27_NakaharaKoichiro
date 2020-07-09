@@ -71,15 +71,7 @@
 			$output.='<option value="edit_'.$asc_rec['sn'].'">編集</option>';
 			$output.='<option value="copy_'.$asc_rec['sn'].'">コピーして新規作成</option>';
 			$output.='<option value="eliminate_'.$asc_rec['sn'].'">除外（論理削除）</option>';
-			$output.='<option value="share">▽他の人と共有</option>';
-			foreach($asc_user as $user_id=>$user_name){
-				$output.='<option value="share_'.$asc_rec['sn'].'_'.$user_id.'">　'.$user_id.$user_name.'</option>';
-			}
-			$output.='<option value="move">▽他の人に移動</option>';
-			foreach($asc_user as $user_id=>$user_name){
-				$output.='<option value="move_'.$asc_rec['sn'].'_'.$user_id.'">　'.$user_id.$user_name.'</option>';
-			}
-			$output.='</select>';
+			
 			$output.='</td>';
 			$output.='</tr>';
 		}
@@ -128,15 +120,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
 		$(document).on('change','#slt_act_todo',function(){
-			const slt_val=$(this).val();//「act_sn」形式（act:edit/copy/eliminate）または「act_sn_(user_id)」形式（act:share/move）
+			const slt_val=$(this).val();//「act_sn」形式（act:edit/copy/eliminate）
 			const ary_val=slt_val.split('_');//デリミタ「_」分割
 			const i_length_ary_val=ary_val.length;
 			if(i_length_ary_val==2){//「act_sn」形式なら
 				const url='todo_'+ary_val[0]+'.php?sn='+ary_val[1];
-				//alert(url);
-				window.location.href=url;//ページ遷移
-			}else if(i_length_ary_val==3){//「act_sn_(user_id)」形式なら
-				const url='todo_'+ary_val[0]+'.php?sn='+ary_val[1]+'&user_id='+ary_val[2];
 				//alert(url);
 				window.location.href=url;//ページ遷移
 			}
